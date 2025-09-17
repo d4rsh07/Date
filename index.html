@@ -1,232 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Date?</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Sacramento&family=Fredoka+One&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date?</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Sacramento&family=Fredoka+One&family=Caveat:wght@600&display=swap" rel="stylesheet">
 
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Tangerine');
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Tangerine');
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Bellota Text', sans-serif;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Bellota Text', sans-serif;
+    }
 
-        body, html {
-            width: 100%;
-            height: 100vh;
-            background-image: url("https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y0MzgtdGFuZy0xNGEtY2hlcnJ5Ymxvc3NvbV8xLmpwZw.jpg");
-            background-size: cover;
-        }
+    body, html {
+      width: 100%;
+      height: 100vh;
+      background-image: url("https://images.rawpixel.com/image_social_landscape/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Y0MzgtdGFuZy0xNGEtY2hlcnJ5Ymxvc3NvbV8xLmpwZw.jpg");
+      background-size: cover;
+    }
 
-        .confirmation {
-            display: none;
-            width: 400px;
-            height: 500px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .confirmation h1 {
-            font-style: bolder;
-            font-size: 50px;
-            font-weight: 700;
-            text-shadow: 0px 3px 6px rgb(147, 77, 77);
-            line-height: 90px;
-        }
-
-        .fix-gif {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 200px;
-        }
-
-        .fix-gifimg {
-            border-radius: 60px;
-            width: 384px;
-            height: 216px;
-            background-image: url("https://media.tenor.com/991M04pGJ18AAAAM/cute.gif");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: #fff;
-            overflow: hidden;
-        }
-
-        .container h1 {
-            margin-bottom: 20px;
-            margin-top: 50px;
-            font-style: bolder;
-            font-size: 50px;
-            font-weight: 700;
-            text-shadow: 0px 3px 6px rgb(147, 77, 77);
-        }
-
-        #fix {
-            margin-top: 30px;
-            border: none;
-            width: 400px;
-            height: 50px;
-            font-size: 30px;
-            border-radius: 10px;
-            background: none;
-            backdrop-filter: blur(5px);
-            border: 1px solid black;
-            font-weight: 550;
-        }
-
-        .container {
-            width: 400px;
-            height: 500px;
-            position: absolute;
-            left: 50%;
-            top: 40%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .gif {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 300px;
-        }
-
-        .gifimg {
-            border-radius: 10px;
-            width: 273px;
-            height: 285px;
-            background-image: url("https://media.tenor.com/cofRHcGGOfoAAAAi/shy-cute.gif");
-            background-size: cover;
-        }
-
-        .answer-box {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 10px;
-            margin-top: 5px;
-            width: 100%;
-            height: 80px;
-            gap: 50px;
-        }
-
-        .answer {
-            border: none;
-            width: 100px;
-            height: 50px;
-            font-size: 30px;
-            border-radius: 10px;
-            background: none;
-            backdrop-filter: blur(5px);
-            border: 1px solid black;
-            font-weight: 550;
-        }
-
-        .answer:hover {
-            box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.449);
-        }
-
-        /* 📱 Responsive for mobile */
-        @media screen and (max-width: 600px) {
-            .container {
-                width: 90%;
-                height: auto;
-            }
-
-            .container h1 {
-                margin-top: 30px;
-                padding: 8px;
-                font-size: 2.5rem; /* smaller but keeps style */
-            }
-
-            .gifimg {
-                width: 220px;
-                height: 230px;
-                background-size: cover;
-            }
-
-            .answer {
-                font-size: 20px;
-                width: 90px;
-                height: 45px;
-            }
-
-            #fix {
-                width: 250px;
-                height: 50px;
-                font-size: 24px;
-            }
-
-            .confirmation {
-                width: 90%;
-                height: auto;
-            }
-
-            .confirmation h1 {
-                font-size: 2.5rem;
-                line-height: 60px;
-            }
-
-            .fix-gifimg {
-                width: 280px;
-                height: 180px;
-                border-radius: 20px;
-            }
-
-            #funnyImage {
+    .confirmation {
       display: none;
-      margin-top: 20px;
-      max-width: 80%;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4) }
-        }
-    </style>
+      width: 400px;
+      height: 500px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .confirmation h1 {
+      font-style: bolder;
+      font-size: 50px;
+      font-weight: 700;
+      text-shadow: 0px 3px 6px rgb(147, 77, 77);
+      line-height: 90px;
+    }
+
+    .fix-gif {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 200px;
+    }
+
+    .fix-gifimg {
+      border-radius: 60px;
+      width: 384px;
+      height: 216px;
+      background-image: url("https://media.tenor.com/991M04pGJ18AAAAM/cute.gif");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+      margin-top: 50px;
+      font-style: bolder;
+      font-size: 4rem; /* ✅ default smaller for better fit */
+      font-weight: 700;
+      text-shadow: 0px 3px 6px rgb(147, 77, 77);
+      line-height: 1.2;
+    }
+
+    #fix {
+      margin-top: 30px;
+      border: none;
+      width: 400px;
+      height: 50px;
+      font-size: 30px;
+      border-radius: 10px;
+      background: none;
+      backdrop-filter: blur(5px);
+      border: 1px solid black;
+      font-weight: 550;
+    }
+
+    .container {
+      width: 400px;
+      height: 500px;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .gif {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 300px;
+    }
+
+    .gifimg {
+      border-radius: 10px;
+      width: 273px;
+      height: 285px;
+      background-image: url("https://media.tenor.com/cofRHcGGOfoAAAAi/shy-cute.gif");
+      background-size: cover;
+    }
+
+    .answer-box {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 10px;
+      margin-top: 5px;
+      width: 100%;
+      height: 80px;
+      gap: 50px;
+    }
+
+    .answer {
+      border: none;
+      width: 100px;
+      height: 50px;
+      font-size: 30px;
+      border-radius: 10px;
+      background: none;
+      backdrop-filter: blur(5px);
+      border: 1px solid black;
+      font-weight: 550;
+    }
+
+    .answer:hover {
+      box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.449);
+    }
+
+    /* 📱 Responsive for mobile */
+    @media screen and (max-width: 600px) {
+      .container {
+        width: 90%;
+        height: auto;
+      }
+
+      .container h1 {
+        margin-top: 30px;
+        padding: 8px;
+        font-size: 2rem; /* ✅ smaller text for mobile */
+      }
+
+      .gifimg {
+        width: 220px;
+        height: 230px;
+        background-size: cover;
+      }
+
+      .answer {
+        font-size: 20px;
+        width: 90px;
+        height: 45px;
+      }
+
+      #fix {
+        width: 250px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      .confirmation {
+        width: 90%;
+        height: auto;
+      }
+
+      .confirmation h1 {
+        font-size: 2.5rem;
+        line-height: 60px;
+      }
+
+      .fix-gifimg {
+        width: 280px;
+        height: 180px;
+        border-radius: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-
-    <div class="container">
-        <div class="question">
-            <h1 style="font-family: 'Great Vibes', cursive; font-size: 5rem; color: #d6336c;">Will you go on a date with me?</h1>
-        </div>
-        <div class="gif">
-            <div class="gifimg"></div>
-        </div>
-        <div class="answer-box">
-            <button class="answer" id="yes" style="font-family: 'Sacramento'">Yes!!!</button>
-            <button class="answer" id="no" style="font-family: 'Sacramento';">No</button>
-        </div>
+  <div class="container">
+    <div class="question">
+      <h1 style="font-family: 'Great Vibes', cursive; color: #d6336c;">Will you go on a date with me?</h1>
     </div>
+    <div class="gif">
+      <div class="gifimg"></div>
+    </div>
+    <div class="answer-box">
+      <button class="answer" id="yes" style="font-family: 'Sacramento'">Yes!!!</button>
+      <button class="answer" id="no" style="font-family: 'Sacramento';">No</button>
+    </div>
+  </div>
 
-    <div class="confirmation">
-        <h1 style="font-family: Great Vibes; color: #fff5e6; font-size: 4.8rem;">Yayyyyyyyy!!! Finally</h1>
-        <div class="question">
-            <div class="fix-gif">
-                <div class="fix-gifimg"></div>
-            </div>
-            <button class="answer" id="fix" style="color: #ff3366; font-family:'Pacifico', cursive;">Let's Fix a date</button>
-        </div>
+  <div class="confirmation">
+    <h1 style="font-family: Great Vibes; color: #fff5e6;">Yayyyyyyyy!!! Finally</h1>
+    <div class="question">
+      <div class="fix-gif">
+        <div class="fix-gifimg"></div>
+      </div>
+      <button class="answer" id="fix" style="color: #ff3366; font-family:'Pacifico', cursive;">Let's Fix a date</button>
+    </div>
+  </div>
 
-        <audio id="bg-music" loop>
+  <audio id="bg-music" loop>
     <source src="song.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-
-      <script>
+  <script>
     const yes = document.querySelector("#yes");
     const no = document.querySelector("#no");
     const confirmation = document.querySelector(".confirmation");
@@ -237,7 +230,7 @@
 
     // preload funny image
     const funnyImage = document.createElement("img");
-    funnyImage.src = "funimage.jpg"; // upload image online (imgbb, postimages, github, etc.)
+    funnyImage.src = "funimage.jpg"; // upload image online
     funnyImage.style.display = "none";
     funnyImage.style.maxWidth = "90%";
     funnyImage.style.marginTop = "20px";
@@ -247,10 +240,9 @@
 
     function playMusic() {
       music.muted = false;
-      music.volume = 0; // start muted
-      music.play().catch(()=>{}); // handle autoplay block
+      music.volume = 0; 
+      music.play().catch(()=>{});
 
-      // fade in volume
       let fadeInterval = setInterval(() => {
         if (music.volume < 1) {
           music.volume = Math.min(music.volume + 0.05, 1);
@@ -285,6 +277,5 @@
       window.location = "https://wa.me/+918800939507?text=Yesss!! I would love to go a date 💕";
     }, false);
   </script>
-
 </body>
 </html>
